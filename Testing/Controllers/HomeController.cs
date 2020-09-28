@@ -5,6 +5,7 @@ using Testing.Models;
 using Microsoft.AspNetCore.Http;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using MyPortal.Connexus.Web.Filters;
 
 namespace Testing.Controllers
 {
@@ -15,59 +16,36 @@ namespace Testing.Controllers
             return View();
         }
 
+        [SamlStateToTempData]
         [Route("/consumer"), HttpPost]
-        public IActionResult Consumer(string samlResponse) {
-            if (string.IsNullOrWhiteSpace(samlResponse))
+        public void Consumer(string samlResponse) {
+            var homeModel = new HomeModel
             {
-                return GenerateBadRequest("Empty SAML Response.");
-            }
-            else
-            {
-                var homeModel = new HomeModel
-                {
-                    thing1 = samlResponse + " thing is here",
-                    thing2 = samlResponse + " other thing here"
-                };
+                thing1 = samlResponse + " thing is here",
+                thing2 = samlResponse + " other thing here"
+            };
 
-                var objAsString = ObjectToString(homeModel);
-                HttpContext.Session.SetString("HomeModel", objAsString);
-                var result = HttpContext.Session.GetString("HomeModel");
-                return Redirect("/confirm");
-         
-            }
+            var objAsString = ObjectToString(homeModel);
+            HttpContext.Session.SetString("HomeModel", objAsString);
+            var result = HttpContext.Session.GetString("HomeModel");
+            Response.Redirect(Url.Action("Confirm", "Home"));
+            //return RedirectToAction("Confirm", "Home");
         }
 
         [Route("/confirm"), HttpGet]
+        [SamlStateFromTempData]
         public IActionResult Confirm()
         {
             var result = HttpContext.Session.GetString("HomeModel");
             if (result != null && StringToObject(result) is HomeModel homeModel)
             {
+                var count = this.ModelState.Count;
                 return View("Index", homeModel);
             }
             else
             {
                 return new RedirectResult("/");
             }
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

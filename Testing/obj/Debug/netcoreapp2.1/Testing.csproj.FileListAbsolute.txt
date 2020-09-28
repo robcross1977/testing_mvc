@@ -16,10 +16,7 @@ C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.TagHelpers.input.cache
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.TagHelpers.output.cache
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.RazorCoreGenerate.cache
-C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
-C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -33,3 +30,4 @@ C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.pdb
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.genruntimeconfig.cache
 C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.csproj.CopyComplete
+C:\Users\UCROSRO\source\learning\Testing\Testing\obj\Debug\netcoreapp2.1\Testing.csprojAssemblyReference.cache
