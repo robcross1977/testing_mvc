@@ -25,9 +25,9 @@ namespace Testing.Controllers {
                 };
 
                 return View("Index", homeModel);
-            } else {
-                return new RedirectResult("/");
             }
+
+            return new RedirectResult("/");
         }
     }
 }
